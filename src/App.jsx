@@ -1,7 +1,16 @@
 import "./App.css";
+import Login from "./Components/Login";
+import Profile from "./Components/Profile";
+import UserContextProvider from "./Context/UserContextProvider";
 
 function App() {
-  return <h1>Context in React</h1>;
+  return (
+    <UserContextProvider>
+      <h1>Context in React</h1>
+      <Login />
+      <Profile />
+    </UserContextProvider>
+  );
 }
 
 export default App;
